@@ -1,0 +1,183 @@
+*{
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Ubuntu, sans-serif;
+}
+
+.active{
+    box-shadow: 0 0 12px -2px #f44245;
+}
+
+
+
+#shadow {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.popup{
+    display: block;
+    width: 260px;
+    background-color: #fff;
+    border: 2px solid darkcyan;
+    padding: 30px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: -999px;
+    transition: .5s all linear;
+}
+
+.popup label{
+    color: #000;
+}
+
+.popup input{
+    width: 100%;
+    border: 1px solid darkcyan;
+    margin: 10px 0;
+    height: 35px;
+    padding: 5px;
+    outline: none;
+}
+
+
+.submit {
+    background-color: #fff;
+    cursor: pointer;
+    transition: .3s background-color, color;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+.submit:hover{
+    background-color: darkcyan;
+    color: #fff
+}
+
+.submit-fighter{
+    background-color: #f44245;
+}
+
+.submit-fighter:hover{
+    background-color: #f33134;
+}
+
+#callback{
+    display: none;
+}
+
+#callback:checked ~ .popup{
+    top: 50%;
+
+}
+
+.close{
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    font-size: 24px;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    color:#000;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+#fight{
+    width:150px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(211, 12, 12);
+    box-shadow: 0 -3px rgb(170, 29, 29) inset;
+    transition: 0.2s;
+    display: none;
+    position: absolute;
+    bottom: 10%;
+}
+
+#fight:hover{
+    background: rgb(220, 2, 2)
+}
+
+
+
+.fighters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 0 15px;
+}
+
+
+.fighter {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.fighter:hover {
+    box-shadow: 0 0 50px 10px rgba(0,0,0,0.06);
+    cursor: pointer;
+}
+
+.name {
+    align-self: center;
+    font-size: 21px;
+    margin-top: 20px;
+}
+
+.fighter-image {
+    height: 260px;
+}
+
+.container-progress{
+    padding-bottom: 20px;
+}
+
+#loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.7);
+    visibility: hidden;
+}

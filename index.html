@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Street Figth</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
 
+    <div id="root">
+        <div id="popup-window">
+
+
+            <label id="shadow" style="display: none" for="callback">
+            </label>
+
+            <input type="checkbox" id="callback">
+
+            <form action="#" class="popup" name="popupForm">
+                <label for = "fighterName">Name fighter</label>
+                <input type="text" id="fighterName" name="fighterName">
+
+                <label for = "health">Health</label>
+                <input type="text" id="health" name="health">
+
+                <label for = "attack">Attack</label>
+                <input type="text" id="attack" name="attack">
+
+                <label for = "defense">Defence</label>
+                <input type="text" id="defense" name="defense">
+
+                <input class="submit" type="button" name="confirm" id="confirm" value="Upgrade">
+                <input type="button" class="submit submit-fighter" value="choose a fighter" name="choseFighter">
+
+                <label class="close" for="callback">+</label>
+            </form>
+
+        </div>
+        <a href="#" id="fight">fight</a>
+    </div>
+
+    <div id="loading-overlay">
+      <img src="resources/logo.png"/>
+    </div>
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
